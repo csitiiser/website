@@ -1,4 +1,4 @@
-React version of the website
-
 LOCAL SETUP
-`npm install`
+```git clone https://github.com/csitiiser/website```
+```cd website```
+```npm install```
