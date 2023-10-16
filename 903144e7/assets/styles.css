@@ -186,8 +186,8 @@ a {
 
 .vw-left .block .button {
     font-size: 1.25rem;
-    margin-top: 8rem;
     margin-left: 3.75rem;
+    margin-top: max(8vh, 3rem);
 }
 
 .vw-right {
@@ -339,7 +339,7 @@ a {
         padding-left: 0.75rem;
     }
 
-    .vw-left .block .head, .vw-left .block .description {
+    .vw-left .block .head, .vw-left .block .description, .vw-left .block .button {
         margin-left: 0rem !important;
     }
     
