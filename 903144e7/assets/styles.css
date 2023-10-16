@@ -9,6 +9,7 @@ html, body {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     color: #fff;
+    z-index: 0;
 }
 
 :root {
@@ -38,7 +39,10 @@ a {
     transition-duration: 1.7s;
     align-items: center;
     flex-direction: row-reverse;
-    transition-duration: 1.2s;
+    transition-duration: 1.2s; width: 100%;
+    width: -moz-available;          
+    width: -webkit-fill-available;  
+    width: stretch;                 
 }
 
 .header:hover {
@@ -65,6 +69,11 @@ a {
 
 .header .left .icon {
     display: none;
+    font-size: 26px;
+}
+
+.header .left .icon:hover {
+    cursor: pointer;
 }
 
 .header .left .nav {
@@ -73,7 +82,6 @@ a {
     justify-content: space-between;
     align-items: center;
     font-size: 1.25rem;
-    backdrop-filter: blur(0.5rem);
 }
 
 .header .left .nav .nav-element {
@@ -95,8 +103,14 @@ a {
 
 .header .left .nav .nav-element .dropdown-content {
     width: 100%;
-    display: none;
     flex-direction: column;
+    display: none;
+}
+
+.header .left .nav .nav-element .dropdown-content .flex {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .header .right .icons {
@@ -118,15 +132,22 @@ a {
     display: none;
 }
 
+.header .left .mb-head .close {
+    font-size: 22px;
+}
+
+.header .left .mb-head .close:hover {
+    cursor: pointer;
+}
+
 .vw {
     display: flex;
     gap: 1.5vw;
 }
 
 .vw-left {
-    width: 60vw;
-    margin: 1rem max(1rem, 2vw) 0rem max(1rem, 2vw);
-    height: 80vh;
+    margin: 0 max(0.75rem, 2.5vw);
+    height: 90vh;
     display: flex;
     flex: none;
     overflow: auto;
@@ -143,23 +164,28 @@ a {
 .vw-left .block {
     min-height:100%;
     scroll-snap-align: center;
+    overflow: visible;
 }
 
 .vw-left .block .head {
-    font-size: 4.5vw;
+    font-size: 4rem;
     margin-top: 5rem;
     margin-left: 3.25rem;
+    word-wrap: break-word;
+    padding-right: 1.5rem;
 }
 
 .vw-left .block .description {
-    font-size: 2vw;
+    font-size: 2rem;
     margin-top: 1rem;
     margin-left: 3.75rem;
     color: var(--secondary-color);
+    word-wrap: break-word;
+    padding-right: 1.5rem;
 }
 
 .vw-left .block .button {
-    font-size: 1.25vw;
+    font-size: 1.25rem;
     margin-top: 8rem;
     margin-left: 3.75rem;
 }
@@ -186,8 +212,6 @@ a {
 }
 
 .fade {
-    margin: 50px;
-    padding: 50px;
     background-color: transparent;
     transition: opacity 0.7s ease-in;
 }
@@ -196,9 +220,6 @@ a {
 .fadeIn { opacity: 1; }
 
 .footer {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
     padding: 1rem 2rem;
     font-weight: 300;
     font-size: 0.75rem;
@@ -253,7 +274,8 @@ a {
     .header .left .nav .nav-element .dropdown-content {
         position: absolute;
         top: 3rem;
-        left:0;
+        left: 0;
+        margin-bottom: 1rem;
     }
 
     .header .left .nav {
@@ -263,6 +285,10 @@ a {
 }
 
 @media only screen and (max-width: 600px) {
+    .header {
+        position: fixed;
+    }
+
     .header .left .icon {
         display: block;
     }
@@ -271,7 +297,7 @@ a {
         display: none;
 
         width: 95vw;
-        height: 100%;
+        min-height: 100vh;
         position: absolute;
         right: 0;
         top:0;
@@ -281,8 +307,10 @@ a {
         justify-content: start;
         align-items: start;
 
-        padding: 1rem 1rem;
+        padding: 2rem 1rem;
         gap: 1.5rem;
+        backdrop-filter: blur(1.5rem);
+        z-index:99;
     }
 
     .header .left .nav .nav-element {
@@ -292,16 +320,27 @@ a {
 
     .header .left .nav .mb-head {
         display: flex;
-        font-size: 1.25rem;
+        font-size: 2rem;
         width: 100%;
         padding: 0rem 0rem;
         padding-bottom: 3px;
-        border-bottom: 1px solid white;
         justify-content: space-between;
+        align-items: center;
     }
 
     .header .left .nav .mb-head div {
         padding: 0rem 1rem;
+    }
+
+    .vw-left {
+        width: 95vw;
+        margin-top: 6rem;
+        margin-right: 0.25rem;
+        padding-left: 0.75rem;
+    }
+
+    .vw-left .block .head, .vw-left .block .description {
+        margin-left: 0rem !important;
     }
     
 }
