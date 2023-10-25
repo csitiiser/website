@@ -38,7 +38,7 @@ a {
     padding: max(1.5rem, 1.75vh) max(1rem, 4.5vw);
     transition-duration: 1.7s;
     align-items: center;
-    flex-direction: row;
+    flex-direction: row-reverse;
     transition-duration: 1.2s; width: 100%;
     width: -moz-available;          
     width: -webkit-fill-available;  
@@ -253,7 +253,7 @@ a {
     }
 
     .header .mid {
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .header {
@@ -266,6 +266,27 @@ a {
 
     .header:hover {
         backdrop-filter: blur(1.5rem);
+    }
+    h1 {
+        font-size: 2.125rem;
+    }
+    h2 {
+        font-size: 1.875rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    h4 {
+        font-size: 1.25rem;
+    }
+    h5 {
+        font-size: 1.125rem;
+    }
+    h6 {
+        font-size: 1rem;
+    }
+    h7 {
+        font-size: 1rem;
     }
 } 
 
@@ -280,6 +301,27 @@ a {
 
     .header .left .nav {
         display: flex !important;
+    }
+    h1 {
+        font-size: 1.75rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    h3 {
+        font-size: 1.25rem;
+    }
+    h4 {
+        font-size: 1.125rem;
+    }
+    h5 {
+        font-size: 1rem;
+    }
+    h6 {
+        font-size: 1rem;
+    }
+    h7 {
+        font-size: 1rem;
     }
 
 }
@@ -343,4 +385,25 @@ a {
         margin-left: 0rem !important;
     }
     
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1.25rem;
+    }
+    h3 {
+        font-size: 1.125rem;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+    h5 {
+        font-size: 1rem;
+    }
+    h6 {
+        font-size: 1rem;
+    }
+    h7 {
+        font-size: 1rem;
+    }
 }
