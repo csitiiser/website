@@ -38,7 +38,7 @@ a {
     padding: max(1.5rem, 1.75vh) max(1rem, 4.5vw);
     transition-duration: 1.7s;
     align-items: center;
-    flex-direction: row-reverse;
+    flex-direction: row;
     transition-duration: 1.2s; width: 100%;
     width: -moz-available;          
     width: -webkit-fill-available;  
@@ -253,7 +253,7 @@ a {
     }
 
     .header .mid {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .header {

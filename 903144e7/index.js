@@ -1,6 +1,9 @@
+$(document).ready(function() {
+  $("#header").load("./header.html");
+});
+
 function close_nav() {
     document.getElementById("nav").style.display = "none";
-    console.log("close");
 }
 
 function open_nav() {
