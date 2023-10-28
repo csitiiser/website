@@ -40,6 +40,10 @@ a {
     text-decoration: none;
 }
 
+.top {
+    padding: 0;
+}
+
 #main video {
     position: absolute;
     top: 0;
@@ -158,6 +162,20 @@ a {
 
 .header .left .mb-head .close:hover {
     cursor: pointer;
+}
+
+.head1 {
+    padding: 0.5rem 1rem 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+}
+
+.head1 div {
+    max-width: fit-content;
+    font-size: 3.2rem;
+    border-bottom: 2px solid var(--secondary-color);
+    text-align: center;
 }
 
 .vw {
@@ -289,26 +307,26 @@ a {
 .members {
     padding: 0;
     display: flex;
-    justify-content: space-around;
-    gap: 2rem;
+    justify-content: center;
+    gap: max(2rem, 4vw);
     flex-direction: row;
     margin: 0 1rem;
 }
 
 .members h1 {
-  font: var(--var-heading);
+  font-size: max(1.5rem, 3vw);
   color: var(--var-lightest);
   padding: 0.25rem 0;
 }
 
 .members h2 {
-  font: var(--var-small-heading);
+  font-size: max(0.75rem, 2vw);
   color: var(--var-lightest);
   padding: 0.5rem 0;
 }
 
 .members p {
-  font: var(--var-para);
+  font-size: 1.25rem;
   color: var(--var-soft-blue);
 }
 
@@ -319,7 +337,6 @@ a {
 .members .card-container {
   width: 100%;
   max-width: 400px;
-  margin: 2em auto;
   background-color: var(--var-card-dark);
   border-radius: 15px;
   margin-bottom: 1rem;
@@ -455,7 +472,7 @@ a {
     .header .left .nav {
         display: none;
 
-        width: 95vw;
+        width: 100vw;
         min-height: 100vh;
         position: absolute;
         right: 0;
@@ -503,8 +520,11 @@ a {
     }
 
     .members {
-        padding: 5rem 0;
         flex-direction: column;
+    }
+
+    .top {
+        padding-top: 7rem;
     }
     
 }
