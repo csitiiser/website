@@ -1,5 +1,8 @@
 $(document).ready(function() {
   $("#header").load("./header.html");
+  $("#footer").load("./footer.html");
+  $("#bottom-nav").load("./nav.html");
+  $("#nav").load("./nav.html");
 });
 
 function close_nav() {

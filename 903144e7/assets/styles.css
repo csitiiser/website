@@ -258,9 +258,41 @@ a {
 .fadeIn { opacity: 1; }
 
 .footer {
-    padding: 1rem 2rem;
-    font-weight: 300;
-    font-size: 0.75rem;
+    display: flex;
+    gap: 1rem;
+    padding: max(1.5rem, 1.75vh) max(1rem, 4.5vw);
+    backdrop-filter: blur(3.25rem);
+}
+
+.footer .left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    min-width: 25vw;
+}
+
+.footer .left .main-text {
+    font-size: max(1.75vw, 1.25rem);
+}
+
+.footer .left .sub-text {
+    font-size: max(1vw, 0.75rem);
+}
+
+.footer .left .main-text, .footer .left .sub-text {
+    text-align: left;
+}
+
+.footer .left .logo img {
+    height: max(8vw, 6rem);
+    width: auto;
+}
+
+.footer .left .basis {
+    display: flex;
+    gap: 0.25rem;
+    flex-direction: column;
 }
 
 /* 
@@ -526,5 +558,19 @@ a {
     .top {
         padding-top: 7rem;
     }
-    
+}
+
+@media only screen and (max-width: 800px) { 
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer .left {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .footer .left .main-text, .footer .left .sub-text {
+        text-align: center;
+    }
 }
