@@ -343,15 +343,15 @@ a {
 }
 
 .members h1 {
-  font-size: max(1.5rem, 2.2vw);
+  font-size: max(1.5rem, 1.5vw);
   color: var(--var-lightest);
-  padding: 0.25rem 0;
+  padding: 0.5rem 0 0 0;
 }
 
 .members h2 {
-  font-size: max(0.75rem, 1.5vw);
-  color: var(--var-lightest);
-  padding: 0.5rem 0;
+  font-size: max(0.75rem, 1vw);
+  color: #bbb;
+  padding: 0.25rem 0;
 }
 
 .members p {
