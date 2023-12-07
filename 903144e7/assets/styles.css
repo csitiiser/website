@@ -41,7 +41,7 @@ a {
 }
 
 .top {
-    padding: 0;
+    padding: 0.5rem 1rem 1rem 1rem;
 }
 
 #main video {
@@ -165,7 +165,6 @@ a {
 }
 
 .head1 {
-    padding: 0.5rem 1rem 1rem 1rem;
     display: flex;
     justify-content: center;
     margin-bottom: 1.25rem;
@@ -401,6 +400,19 @@ a {
   left: 43%;
 }
 
+.gentext {
+    margin: 0 max(0.75rem, 7.5vw);
+}
+
+.gentext a {
+    color:#e2c000;
+    transition-duration: 0.7s;
+}
+
+.gentext a:hover {
+    text-decoration: underline;
+}
+
 @media (min-width: 400px) {
   .members img.eye {
     max-width: 3em;
@@ -554,6 +566,11 @@ a {
 
     .top {
         padding-top: 7rem;
+    }
+
+    .gentext {
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
     }
 }
 
