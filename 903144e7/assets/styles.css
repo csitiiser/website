@@ -65,8 +65,9 @@ a {
     width: -moz-available;          
     width: -webkit-fill-available;  
     width: stretch;
-    backdrop-filter: blur(1.5rem);
+    background-color: black;
     z-index: 11;              
+    border-bottom: 1px solid #e2c000;
 }
 
 .header:hover {
@@ -488,11 +489,37 @@ a {
 
 @media only screen and (min-width: 600px) {
     
-    .header .left .nav .nav-element .dropdown-content {
+    .header .left .nav .nav-element .flex-target > div {
+        display: none;
+        transition-delay: 0.7s;
+        transition-duration: 0.7s;
+    }
+
+    .header .left .nav .nav-element .flex-target:hover div {
+        display: flex;
+    }
+
+    .header .left .nav .nav-element .flex {
         position: absolute;
-        top: 3rem;
-        left: 0;
+        top: 2.5rem;
+        left: -1rem;
         margin-bottom: 1rem;
+
+        background-color: #041d1f;
+        min-width: 10.5vw;
+        border-bottom: 1px solid #e2c000;
+        flex-direction: column;
+        z-index:12;
+    }
+
+    .header .left .nav .nav-element .flex div {
+        padding: 0.5rem 1rem;
+        transition-duration: 0.7s;
+    }
+
+    .header .left .nav .nav-element .flex div:hover {
+        background-color: #06343e;
+        color: #e2c000;
     }
 
     .header .left .nav {

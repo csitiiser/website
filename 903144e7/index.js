@@ -5,14 +5,6 @@ $(document).ready(function() {
   $("#nav").load("./nav.html");
 });
 
-function close_nav() {
-    document.getElementById("nav").style.display = "none";
-}
-
-function open_nav() {
-    document.getElementById("nav").style.display = "flex";
-}
-
 function toggle(x) {
   classname = '#' + x;
   $(classname).slideToggle('slow'); 
