@@ -57,7 +57,7 @@ a {
 .header {
     display: flex;
     justify-content: space-between;
-    padding: max(1.5rem, 1.75vh) max(1rem, 4.5vw);
+    padding: 0.75rem max(1rem, 4.5vw);
     transition-duration: 1.7s;
     align-items: center;
     flex-direction: row;
@@ -65,8 +65,10 @@ a {
     width: -moz-available;          
     width: -webkit-fill-available;  
     width: stretch;
-    backdrop-filter: blur(1.5rem);
-    z-index: 11;              
+    background-color: #0D0D0D;
+    border-bottom: 2px solid #05A6A6;
+    z-index: 11;
+                  
 }
 
 .header:hover {
@@ -178,90 +180,34 @@ a {
     text-align: center;
 }
 
-.vw {
-    display: flex;
-    gap: 1.5vw;
+.homepage--banner {
+    padding: max(1.5rem, 5vh) max(1rem, 4.5vw);
 }
 
-.vw-left {
-    margin: 0 max(0.75rem, 2.5vw);
-    height: 90vh;
-    display: flex;
-    flex: none;
-    overflow: auto;
-    flex-flow: column nowrap;
-    scroll-snap-type: y mandatory;
-    -ms-overflow-style: none; 
-    scrollbar-width: none;  
-}
-
-.vw-left::-webkit-scrollbar {
-    display: none;
-}
-
-.vw-left .block {
-    min-height:100%;
-    scroll-snap-align: center;
-    overflow: visible;
-}
-
-.vw-left .block .head {
-    font-size: 4rem;
-    margin-top: 5rem;
-    margin-left: 3.25rem;
-    word-wrap: break-word;
-    padding-right: 1.5rem;
-}
-
-.vw-left .block .description {
-    font-size: 2rem;
-    margin-top: 1rem;
-    margin-left: 3.75rem;
-    color: var(--secondary-color);
-    word-wrap: break-word;
-    padding-right: 1.5rem;
-}
-
-.vw-left .block .button {
-    font-size: 1.25rem;
-    margin-left: 3.75rem;
-    margin-top: max(8vh, 3rem);
-}
-
-.vw-right {
-    margin-right: 1rem;
-    padding: 1rem 2rem;
-    backdrop-filter: blur(3.25rem);
-}
-
-.vw-right .head {
-    font-size: 2.25rem;
-    padding-bottom: 2px;
-    border-bottom: 1px solid white;
+.homepage--banner .head {
+    font-size: max(2.5vw, 2rem);
+    font-weight: 600;
     margin-bottom: 1rem;
 }
 
-.vw-right .item {
-    padding-bottom: 1.25rem;
+.homepage--banner .description {
+    font-size: max(1.25vw, 1.25rem);
+    font-weight: 300;
+    margin-bottom: 1rem;
+    max-width: 80rem;
 }
 
-.vw-right .item .h {
-    font-size: 1.25rem;
+.carousel--container {
+    padding: max(1.5rem, 1vh) 0;
+    backdrop-filter: blur(1.5rem);
 }
-
-.fade {
-    background-color: transparent;
-    transition: opacity 0.7s ease-in;
-}
-
-.fadeOut { opacity: 0; }
-.fadeIn { opacity: 1; }
 
 .footer {
     display: flex;
     gap: 1rem;
-    padding: max(1.5rem, 1.75vh) max(1rem, 4.5vw);
-    backdrop-filter: blur(3.25rem);
+    padding: 1rem max(1rem, 4.5vw);
+    background-color: #0D0D0D;
+    border-top: 2px solid #05A6A6;
 }
 
 .footer .left {
@@ -574,3 +520,4 @@ a {
         text-align: center;
     }
 }
+
