@@ -10,7 +10,7 @@
             </div>
         </div>
     </a>
-    <div class="left" id="nav">
+    <div class="left">
         <div class="icon" onclick="open_nav()"><i class="fa-solid fa-bars"></i></div>
         <div class="nav" id="nav">
             <div class="mb-head">
@@ -19,34 +19,30 @@
                     Close <i class="fa-solid fa-x"></i>
                 </div>
             </div>
-            <div class="nav-element">
-                <div onmouseover="toggle('c1')" class="flex-target" onclick="toggle('c1')">
-                    Content
-                    <i class="fa-solid fa-angle-down"></i>
-                </div>
-
-                <div class="dropdown-content" id="c1" onmouseleave="toggle('c1')">
-                    <div class="flex">
-                        <div><a href="blog.html">Blog</a></div>
-                        <div><a href="magazine.html">Magazine</a></div>
-                        <div><a href="newsletter.html">Newsletter</a></div>
-                    </div>
-                </div>
+            <div class="dropdown-container">
+                <details class="dropdown left">
+                    <summary>
+                        <span>Content <i class="fa-solid fa-angle-down"></i></span>
+                    </summary>
+                    <ul>
+                        <li> <a href="#"> Blog </a> </li>
+                        <li> <a href="#"> Newsletter </a> </li>
+                        <li> <a href="#"> Magazine </a> </li>
+                    </ul>
+                </details>
             </div>
-            <div class="nav-element">
-                <div onmouseover="toggle('c2')" class="flex-target" onclick="toggle('c2')">
-                    Events
-                    <i class="fa-solid fa-angle-down"></i>
-                </div>
-
-                <div class="dropdown-content" id="c2" onmouseleave="toggle('c2')">
-                    <div class="flex">
-                        <div>Anvesha</div>
-                        <div>ITSAV</div>
-                        <div>IISM</div>
-                        <div>IICM</div>
-                    </div>
-                </div>
+            <div class="dropdown-container">
+                <details class="dropdown left">
+                    <summary>
+                        <span>Events <i class="fa-solid fa-angle-down"></i></span>
+                    </summary>
+                    <ul>
+                        <li> <a href="#"> Gallery </a> </li>
+                        <li> <a href="#"> TODO#1 </a> </li>
+                        <li> <a href="#"> TODO#2 </a> </li>
+                        <li> <a href="#"> TODO#3 </a> </li>
+                    </ul>
+                </details>
             </div>
 
             <div class="nav-element">

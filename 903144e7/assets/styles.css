@@ -115,6 +115,11 @@ a {
     gap: 0.5rem;
     flex-direction: column;
     position: relative;
+    transition-duration: 0.7s;
+}
+
+.header .left .nav .nav-element:hover {
+    color: #05A6A6;
 }
 
 .header .left .nav .nav-element .flex-target {
@@ -390,6 +395,119 @@ a {
   transition: opacity 0.3s ease-out;
 }
 
+.dropdown-container {
+    display: inline-block;
+    padding: 10px;
+  }
+  .dropdown-container .dropdown {
+    position: relative;
+  }
+  .dropdown-container .dropdown[open] .with-down-arrow::after {
+    content: "";
+  }
+  .dropdown-container .dropdown[open] summary {
+    background: #ffffff10;
+  }
+  .dropdown-container .dropdown summary {
+    list-style: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 6px;
+    transition-duration: 0.7s;
+  }
+  .dropdown-container .dropdown summary:hover {
+    color:#05A6A6;
+  }
+  .dropdown-container .dropdown summary.avatar {
+    border-radius: 50px;
+  }
+  .dropdown-container .dropdown summary.avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    display: inline-block;
+    margin: 0;
+  }
+  .dropdown-container .dropdown summary .with-down-arrow {
+    display: inline-flex;
+    padding: 5px;
+    align-items: center;
+    color: #fff;
+    line-height: 1;
+  }
+  .dropdown-container .dropdown summary .with-down-arrow::after {
+    content: "";
+    font-family: "Material Symbols Outlined";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+  }
+  .dropdown-container .dropdown.left ul {
+    left: 0;
+  }
+  .dropdown-container .dropdown.right ul {
+    right: 0;
+  }
+  .dropdown-container .dropdown ul {
+    padding: 0;
+    margin-top: 12px;
+    min-width: max-content;
+    position: absolute;
+    top: 100%;
+    border-radius: 10px;
+    background-color: #0D0D0D;
+    border: 2px solid #05A6A6;
+    z-index: 2;
+  }
+  .dropdown-container .dropdown ul li {
+    list-style-type: none;
+    display: block;
+    /* If you use divider & borders, it's best to use top borders */
+    /*border-top: 1px solid #ccc;*/
+  }
+  .dropdown-container .dropdown ul li p {
+    padding: 10px 15px;
+    margin: 0;
+  }
+  .dropdown-container .dropdown ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 15px;
+    text-decoration: none;
+    line-height: 1;
+    color: #fff;
+    transition-duration: 0.7s;
+  }
+  .dropdown-container .dropdown ul li a:hover {
+    color: #05A6A6;
+  }
+  .dropdown-container .dropdown ul li:first-of-type {
+    border-radius: 10px 10px 0 0;
+  }
+  .dropdown-container .dropdown ul li:last-of-type {
+    border-radius: 0 0 10px 10px;
+  }
+  .dropdown-container .dropdown ul li.divider {
+    border: none;
+    border-bottom: 1px solid #333;
+    /* 
+     * removes border from Li after the divider element
+     * best used in combination with top borders on other LIs 
+     */
+  }
+  .dropdown-container .dropdown ul li.divider ~ li {
+    border: none;
+  }
+
 .members .hero-image-container:hover::after {
   opacity: 1;
 }
@@ -513,6 +631,17 @@ a {
         padding-left: 1.25rem;
     }
 
+    .header .left .nav .dropdown-container {
+        padding: 0 !important;
+        padding-left: 1.25rem !important;
+    }
+
+    .header .left .nav .dropdown-container .dropdown ul {
+        background-color: transparent;
+        position: relative;
+        border: none;
+    }
+
     .header .left .nav .mb-head {
         display: flex;
         font-size: 2rem;
@@ -586,4 +715,3 @@ a {
         display: flex !important;
     }
 }
-
