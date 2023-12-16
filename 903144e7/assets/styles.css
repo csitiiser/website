@@ -151,7 +151,7 @@ a {
 }
 
 .header .right .icons div:hover {
-    color: var(--secondary-color);
+    color: #05A6A6;
     cursor: pointer;
 }
 
