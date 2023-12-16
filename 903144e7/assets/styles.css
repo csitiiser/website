@@ -218,11 +218,11 @@ a {
 }
 
 .footer .left .main-text {
-    font-size: max(1.75vw, 1.25rem);
+    font-size: 2rem;
 }
 
 .footer .left .sub-text {
-    font-size: max(1vw, 0.75rem);
+    font-size: 1rem;
 }
 
 .footer .left .main-text, .footer .left .sub-text {
@@ -238,6 +238,12 @@ a {
     display: flex;
     gap: 0.25rem;
     flex-direction: column;
+}
+
+.footer .left .basis .icons {
+    display: none;
+    gap: 1rem;
+    font-size: 1.25rem;
 }
 
 /* 
@@ -558,6 +564,26 @@ a {
 
     .footer .left .main-text, .footer .left .sub-text {
         text-align: center;
+    }
+
+    .footer .left .basis {
+        gap: 0.75rem;
+    }
+
+    .footer .left .main-text {
+        font-size: 1.5rem;
+    }
+    
+    .footer .left .sub-text {
+        font-size: 0.75rem;
+    }
+
+    .footer .basis {
+        align-items: center;
+    }
+
+    .footer .basis .icons {
+        display: flex !important;
     }
 }
 
