@@ -5,4 +5,5 @@ mkdir build
 javac ./compiler/WebsiteCompiler.java
 java compiler.WebsiteCompiler prod
 
-cp -r ./assets/* ./build
+mkdir ./build/assets
+cp -r ./assets/* ./build/assets
