@@ -1,0 +1,15 @@
+<div class="left">
+  <div class="logo">
+    <img src="{{ get_asset logo.png }}" alt="CSIT Logo">
+  </div>
+  <div class="basis">
+    <div class="main-text">Chemical Society of IISER Thiruvanathapuram (CSIT)</div>
+    <div class="sub-text">Copyright &copy; 2023, Website Team, CSIT</div>
+    <div class="icons">
+      <div><i class="fa-brands fa-instagram"></i></div>
+      <div><i class="fa-brands fa-linkedin"></i></div>
+      <div><i class="fa-brands fa-github"></i></div>
+      <div><i class="fa-brands fa-discord"></i></div>
+    </div>
+  </div>
+</div>

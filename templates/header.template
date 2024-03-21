@@ -1,0 +1,64 @@
+<div class="header">
+    <a href="{{ get_link index }}">
+        <div class="mid">
+            <div class="logo">
+                <img src="{{ get_asset logo.png }}" alt="CSIT Logo">
+            </div>
+            <div>
+                <div class="head">Chemical Society of IISER Thiruvanathapuram</div>
+                <div class="acronym">CSIT</div>
+            </div>
+        </div>
+    </a>
+    <div class="left">
+        <div class="icon" onclick="open_nav()"><i class="fa-solid fa-bars"></i></div>
+        <div class="nav" id="nav">
+            <div class="mb-head">
+                <div class="title">Navigation</div>
+                <div class="close" onclick="close_nav()">
+                    Close <i class="fa-solid fa-x"></i>
+                </div>
+            </div>
+            <div class="dropdown-container">
+                <details class="dropdown left">
+                    <summary>
+                        <span>Content <i class="fa-solid fa-angle-down"></i></span>
+                    </summary>
+                    <ul>
+                        <li> <a href="{{ get_link blog }}"> Blog </a> </li>
+                        <li> <a href="{{ get_link newsletter }}"> Newsletter </a> </li>
+                        <li> <a href="{{ get_link magazine }}"> Magazine </a> </li>
+                    </ul>
+                </details>
+            </div>
+            <div class="dropdown-container">
+                <details class="dropdown left">
+                    <summary>
+                        <span>Events <i class="fa-solid fa-angle-down"></i></span>
+                    </summary>
+                    <ul>
+                        <li> <a href="#"> Gallery </a> </li>
+                        <li> <a href="#"> TODO#1 </a> </li>
+                        <li> <a href="#"> TODO#2 </a> </li>
+                        <li> <a href="#"> TODO#3 </a> </li>
+                    </ul>
+                </details>
+            </div>
+
+            <div class="nav-element">
+                <div><a href="{{ get_link members }}">Members</a></div>
+            </div>
+            <div class="nav-element">
+                <div><a href="{{ get_link contact }}">Contact</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="icons">
+            <div><i class="fa-brands fa-instagram"></i></div>
+            <div><i class="fa-brands fa-linkedin"></i></div>
+            <div><i class="fa-brands fa-github"></i></div>
+            <div><i class="fa-brands fa-discord"></i></div>
+        </div>
+    </div>
+</div>

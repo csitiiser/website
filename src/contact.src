@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{ include head }}
+  <title> CSIT | Contact </title>
+</head>
+
+<body>
+
+  <section id="main">
+    <video src="{{ get_asset bg.mp4 }}" muted autoplay loop></video>
+    {{ include header }}
+  </section>
+
+  <section class="gentext top">
+    <div class="head1">
+      <div>Contact us</div>
+    </div>
+    <p>
+      <div>Email: <a href="mailto:csit@iisertvm.ac.in">csit@iisertvm.com</a></div>
+      <br>
+      <div>
+        The President, <br>
+        Chemical Society of IISER Thiruvananthapuram (CSIT), <br>
+        Indian Institute of Science Education and Research (IISER), Thiruvananthapuram, <br>
+        Maruthamala P. O., Vithura, <br>
+        Thiruvananthapuram 695551, <br>
+        Kerala, India.
+      </div>
+    </p>
+  </section>
+
+  </section>
+
+  <section class="footer" id="footer">
+  {{ include footer }}
+  </section>
+
+</body>
+
+</html>
