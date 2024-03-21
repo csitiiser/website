@@ -17,7 +17,7 @@ public class WebsiteCompiler {
     public static String buildDirectory = "build";
     public static boolean localBuild = true;
     public static String localhost = "http://127.0.0.1:5500/";
-    public static String deployHost = "https://csit.github.io/website/";
+    public static String deployHost = "https://main--csitwebsite.netlify.app/";
 
 
     public static void main(String[] args) {
@@ -27,6 +27,12 @@ public class WebsiteCompiler {
         Vector<Vector<String>> inputs = new Vector<>(1,1);
         Vector<String> names = new Vector<>(1,1);
         String prefix = localBuild ? localhost : deployHost;
+
+        if(args.length != 0) {
+            if(args[0].equals("prod")) {
+                localBuild = false;
+            }
+        }
 
         System.out.println("Compiling Blog CMS System ...");
         Vector<File> sources = getBlogSources();
