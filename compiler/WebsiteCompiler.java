@@ -1,3 +1,13 @@
+/**
+ * Customized Template-Based Compile Toolchain
+ * Copyright (C) 2024, ChlorinePentoxide
+ * License:
+ *     - All derived works of the project must be open-source.
+ *     - Commercial usage of the application is prohibited.
+ *     - All derived works of the application must display this notice.
+ *     - You are allowed to change, modify the application as you wish subject to the above terms without notice to the author.
+ **/
+
 package compiler;
 
 import java.io.BufferedWriter;
