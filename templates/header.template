@@ -38,15 +38,12 @@
                     </summary>
                     <ul>
                         <li> <a href="{{ get_link gallery }}"> Gallery </a> </li>
-                        <li> <a href="#"> TODO#1 </a> </li>
-                        <li> <a href="#"> TODO#2 </a> </li>
-                        <li> <a href="#"> TODO#3 </a> </li>
-                    </ul>
+                        <li> <a href="#"> Any Additonal Link </a> </li>
                 </details>
             </div>
 
             <div class="nav-element">
-                <div><a href="{{ get_link members }}">Members</a></div>
+                <div><a href="{{ get_link about }}">About</a></div>
             </div>
             <div class="nav-element">
                 <div><a href="{{ get_link contact }}">Contact</a></div>
