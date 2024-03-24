@@ -16,6 +16,7 @@ public class WebsiteCompiler {
     public static String sourceDirectory = "src";
     public static String buildDirectory = "build";
     public static boolean localBuild = true;
+    public static String defaultImage = "default_blog.png";
     public static String localhost = "http://127.0.0.1:5500/";
     public static String deployHost = "https://main--csitwebsite.netlify.app/";
 
@@ -46,8 +47,12 @@ public class WebsiteCompiler {
         File[] listOfFiles = folder.listFiles();
         for (File listOfFile : listOfFiles)
             if(listOfFile.getName().endsWith(".src")) {
-                inputs.addElement(read(listOfFile.getPath()));
-                names.addElement(listOfFile.getName().replace(".src", ""));
+                String name = listOfFile.getName().replace(".src", "");
+                if(name.equals("blog"))
+                    inputs.addElement(parseBlogIndex(read(listOfFile.getPath())));
+                else
+                    inputs.addElement(read(listOfFile.getPath()));
+                names.addElement(name);
             }
 
         System.out.println("Compiling template structures ... ");
@@ -70,7 +75,7 @@ public class WebsiteCompiler {
 
         System.out.println("Verifying compilation ... ");
         for(int i = 0; i < inputs.size(); i++)
-            generateWarnings(aCompiledInputs.elementAt(i), names.elementAt(i)+".html");
+            generateWarnings(hCompiledInputs.elementAt(i), names.elementAt(i)+".html");
     }
 
     /* Blog CMS */
@@ -86,7 +91,7 @@ public class WebsiteCompiler {
 
         String blog_id = f.getName().replace(".blog", "").trim();
 
-        for(int i = 3; i < structure.size(); i++) {
+        for(int i = 4; i < structure.size(); i++) {
             if(structure.elementAt(i).trim().isEmpty()) continue;
             if(structure.elementAt(i).startsWith("add_section")) {
                 String sub = structure.elementAt(i).replace("add_section", "").trim();
@@ -168,6 +173,55 @@ public class WebsiteCompiler {
         Vector<File> list = new Vector<>(1,1);
         for (File listOfFile : listOfFiles) if(listOfFile.getName().endsWith(".blog")) list.addElement(listOfFile);
         return list;
+    }
+
+    public static Vector<String> parseBlogIndex(Vector<String> template) {
+        Vector<File> blogs = getBlogSources();
+        Vector<String> parsed = new Vector<>(1,1);
+        Vector<String> repeatStructure = new Vector<>(1,1);
+        boolean redirect = false;
+        for(String st : template) {
+            if(st.trim().equals("{{ start_repeat_structure }}"))
+                redirect = true;
+            else if(st.trim().equals("{{ end_repeat_structure }}"))
+                break;
+            else 
+                if(!redirect) parsed.addElement(st);
+                else repeatStructure.addElement(st);
+        }
+        for(File f : blogs) {
+            Vector<String> structure = read(f.getPath());
+            Vector<String> entry = new Vector<>(1,1);
+            entry = join(entry, repeatStructure);
+            String blogName = structure.elementAt(0);
+            String blogAuthor = structure.elementAt(1);
+            String blogPublishDate = structure.elementAt(2);
+            String blogDescription = structure.elementAt(3);
+            String blog_id = f.getName().replace(".blog", "").trim();
+            File f_img = new File(blogSourcesDirectory+"/"+blog_id+".img.1");
+            String image = defaultImage;
+            if(f_img.exists()) {
+                image = read(f_img.getPath()).elementAt(1);
+            }
+            String blogLink = blog_id + ".html";
+            
+            entry = replace(entry, "{{ blog_image }}", "{{ get_asset "+image+" }}");
+            entry = replace(entry, "{{ blog_title }}", blogName);
+            entry = replace(entry, "{{ blog_date }}", blogPublishDate);
+            entry = replace(entry, "{{ blog_author }}", blogAuthor);
+            entry = replace(entry, "{{ blog_description }}", blogDescription);
+            entry = replace(entry, "{{ blog_link }}", blogLink);
+
+            parsed = join(parsed, entry);
+        }
+        redirect = true;
+        for(String st : template) {
+            if(st.trim().equals("{{ end_repeat_structure }}")) redirect = false;
+            else {
+                if(!redirect) parsed.addElement(st);
+            }
+        }
+        return parsed;
     }
 
     /* Template Management */

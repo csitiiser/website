@@ -37,7 +37,7 @@
                         <span>Events <i class="fa-solid fa-angle-down"></i></span>
                     </summary>
                     <ul>
-                        <li> <a href="#"> Gallery </a> </li>
+                        <li> <a href="{{ get_link gallery }}"> Gallery </a> </li>
                         <li> <a href="#"> TODO#1 </a> </li>
                         <li> <a href="#"> TODO#2 </a> </li>
                         <li> <a href="#"> TODO#3 </a> </li>
