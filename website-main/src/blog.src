@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{ include head }}
+  <title>CSIT Website Prototype</title>
+</head>
+
+<body>
+
+  <section id="main">
+    <video src="{{ get_asset bg.mp4 }}" muted autoplay loop></video>
+    {{ include header }}
+  </section>
+
+  <div class="site-default">
+    <div class="blogHeader">
+      <div class="title">
+        Blog Posts
+      </div>
+      <hr>
+    </div>
+
+
+
+    <div class="flex-blog">
+      <div class="flex-blog-sub">
+
+        {{ start_repeat_structure }}
+        <div class="blog">
+          <div class="content"><img src="{{ blog_image }}"></div>
+          <div class="content">
+            <div class="title">{{ blog_title }}</div>
+            <div class="sub">{{ blog_author }}</div>
+            <div class="sub">{{ blog_date }}</div>
+            <div class="description">{{ blog_description }}</div>
+            <div class="readMore link"><a href="{{ blog_link }}">Read More</a></div>
+          </div>
+        </div>
+        {{ end_repeat_structure }}
+
+      </div>
+    </div>
+  </div>
+
+  <section class="footer" id="footer">
+    {{ include footer }}
+  </section>
+
+</body>
+
+</html>

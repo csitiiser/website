@@ -1,0 +1,9 @@
+<div class="img-{{ image-alignment }}">
+    <div class="img-container">
+        <img src="{{ get_asset image-name }}" alt="img" style="max-width: {{ image-size }};">
+    </div>
+    <div class="img-caption">{{ image-caption }}</div>
+    <div class="img-source">
+        Source: <a href="{{ image-source-link }}">{{ image-source-name }}</a>
+    </div>
+</div>
