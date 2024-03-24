@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{ include head }}
+  <title> CSIT | Contact </title>
+</head>
+
+<body>
+
+  <section id="main">
+    <video src="{{ get_asset bg.mp4 }}" muted autoplay loop></video>
+    {{ include header }}
+  </section>
+
+ <section>
+    <div class="head1 top">
+      <div>
+        About the Club
+      </div>
+    </div>
+    <div class="about-content">
+      Connect with us on social media for updates and interactions: 
+      Instagram, Twitter, Facebook csit@iisertvm.ac.inConnect with us on social media for updates and interactions: 
+      Instagram, Twitter, Facebook csit@iisertvm.ac.in
+      Connect with us on social media for updates and interactions: 
+      Instagram, Twitter, Facebook csit@iisertvm.ac.in</div>
+
+    <div class="head1 top">
+      <div>Meet the Team </div>
+    </div>
+  </section>
+
+  <div class="member-box">
+  <section class="members">
+    <div class="card-container">
+      <a href="{{ get_asset aaron_shibu.jpg }}" target="_blank" class="hero-image-container">
+        <img class="hero-image" src="{{ get_asset aaron_shibu.jpg }}" target="_blank" alt="Spinning glass cube" />
+      </a>
+      <main class="main-content">
+        <h1><a href="#">Aaron Shibu</a>
+        <h2>President</h2></h1>
+        <p>In Lorem Ipsum I believe.</p>
+      </main>
+    </div>
+    <div class="card-container">
+      <a href="{{ get_asset harshdeep_chhabra.jpg }}" target="_blank" class="hero-image-container">
+        <img class="hero-image" src="{{ get_asset harshdeep_chhabra.jpg }}" target="_blank" alt="Spinning glass cube" />
+      </a>
+      <main class="main-content">
+        <h1><a href="#">Harshdeep Chhabra</a>
+        <h2>Secretary</h2></h1>
+        <p>In Lorem Ipsum I believe.</p>
+      </main>
+    </div>
+    <div class="card-container">
+      <a href="{{ get_asset ananthakrishna_panuganti.jpg }}" target="_blank" class="hero-image-container">
+        <img class="hero-image" src="{{ get_asset ananthakrishna_panuganti.jpg }}" target="_blank" alt="Spinning glass cube" />
+      </a>
+      <main class="main-content">
+        <h1><a href="#">Ananthakrishna Panuganti</a>
+        <h2>Secretary</h2></h1>
+        <p>In Lorem Ipsum I believe.</p>
+      </main>
+    </div>
+    <div class="card-container">
+      <a href="{{ get_asset krishnendu_es.jpg }}" target="_blank" class="hero-image-container">
+        <img class="hero-image" src="{{ get_asset krishnendu_es.jpg }}" target="_blank" alt="Spinning glass cube" />
+      </a>
+      <main class="main-content">
+        <h1><a href="#">Krishnendu ES</a>
+        <h2>Content Head</h2></h1>
+        <p>In Lorem Ipsum I believe.</p>
+      </main>
+    </div>
+    <div class="card-container">
+      <a href="{{ get_asset renuka_manoj.jpg }}" target="_blank" class="hero-image-container">
+        <img class="hero-image" src="{{ get_asset renuka_manoj.jpg }}" target="_blank" alt="Spinning glass cube" />
+      </a>
+      <main class="main-content">
+        <h1><a href="#">Renuka Manoj</a>
+        <h2>Design Head</h2></h1>
+        <p>In Lorem Ipsum I believe.</p>
+      </main>
+    </div>
+    <div class="card-container">
+      <a href="{{ get_asset rishitha.jpg }}" target="_blank" class="hero-image-container">
+        <img class="hero-image" src="{{ get_asset rishitha.jpg }}" target="_blank" alt="Spinning glass cube" />
+      </a>
+      <main class="main-content">
+        <h1><a href="#">Rishitha</a>
+        <h2>Events Head</h2></h1>
+        <p>In Lorem Ipsum I believe.</p>
+      </main>
+    </div>
+
+    <div class="card-container">
+      <a href="{{ get_asset shwetha_jayarajan.jpg }}" target="_blank" class="hero-image-container">
+        <img class="hero-image" src="{{ get_asset shwetha_jayarajan.jpg }}" target="_blank" alt="Spinning glass cube" />
+      </a>
+      <main class="main-content">
+        <h1><a href="#">Shwetha Jayarajan</a>
+        <h2>Content Head</h2></h1>
+        <p>In Lorem Ipsum I believe.</p>
+      </main>
+    </div>
+    <div class="card-container">
+      <a href="{{ get_asset nivedha_baskaran.jpg }}" target="_blank" class="hero-image-container">
+        <img class="hero-image" src="{{ get_asset nivedha_baskaran.jpg }}" target="_blank" alt="Spinning glass cube" />
+      </a>
+      <main class="main-content">
+        <h1><a href="#">Nivedha Baskaran</a>
+        <h2>Editor-in-Chief, Synthesis</h2></h1>
+        <p>In Lorem Ipsum I believe.</p>
+      </main>
+    </div>
+    <div class="card-container">
+      <a href="{{ get_asset prajval_k.jpeg }}" target="_blank" class="hero-image-container">
+        <img class="hero-image" src="{{ get_asset prajval_k.jpeg }}" target="_blank" alt="Spinning glass cube" />
+      </a>
+      <main class="main-content">
+        <h1><a href="#">Prajval K</a>
+        <h2>Website Head</h2></h1>
+        <p>In Lorem Ipsum I believe.</p>
+      </main>
+    </div>
+  </section>
+</div>
+
+  <section class="footer" id="footer">
+  {{ include footer }}
+  </section>
+
+</body>
+
+</html>

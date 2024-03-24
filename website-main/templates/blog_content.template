@@ -1,0 +1,10 @@
+<section class="p">
+    <a href="{{ section-index }}">
+        <h2 id="{{ section-index }}">
+            {{ section-name }}
+        </h2>
+    </a>
+    <p>
+        {{ content }}
+    </p>
+</section>
