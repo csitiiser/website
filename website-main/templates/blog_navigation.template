@@ -1,1 +1,0 @@
-<div class="link"><a href="#{{ i-index }}"><i class="fa-solid fa-caret-right"></i>{{ section-name }}</a></div>
